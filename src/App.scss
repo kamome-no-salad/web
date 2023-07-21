@@ -1,0 +1,52 @@
+
+Header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  margin: 0 auto;
+  max-width: 320px;
+
+
+  img{
+    width: 100px;
+    height: 29.109px;
+  }
+  h1{
+    display: block;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+
+
+    color: #000;
+    text-align: justify;
+    text-align-last: justify;
+    font-family: Noto Sans JP;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 20px; /* 100% */
+    // letter-spacing: 10px;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    padding: 0;
+    li{
+      display: flex;
+      padding: 4px 8px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
