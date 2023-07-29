@@ -16,12 +16,12 @@ function App() {
     <>
       <GlobalNav/>
       <Routes>
-        <Route index element={null}/>
-        <Route path="/About" element={<About />} />
-        <Route path="/Works" element={<Works />} />
-        <Route path="/Member" element={<Member />} />
-        <Route path="/History" element={<History />} />
-        <Route path="/Articles" element={<Articles />} >
+        <Route path="/web" element={null}/>
+        <Route path="/web/About" element={<About />} />
+        <Route path="/web/Works" element={<Works />} />
+        <Route path="/web/Member" element={<Member />} />
+        <Route path="/web/History" element={<History />} />
+        <Route path="/web/Articles" element={<Articles />} >
           <Route path=":articleId" element={<Article />}/>
         </Route>
         <Route path="*" element={<NoMatch />} />
