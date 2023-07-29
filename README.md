@@ -16,3 +16,5 @@ https://kamome-no-salad.github.io/web/
 ## 参考文献
 https://qiita.com/tat_mae084/items/4051c61926dc8165e80b
 https://zenn.dev/shivase/articles/009-react-vite-githubpages
+https://reffect.co.jp/react/react-router-6/
+https://kubogen.com/web-programing-299/
