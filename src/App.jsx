@@ -22,7 +22,8 @@ function App() {
         <Route path="/web/Member" element={<Member />} />
         <Route path="/web/History" element={<History />} />
         <Route path="/web/Articles" element={<Articles />} >
-          <Route path=":articleId" element={<Article />}/>
+          {/* <Route path=":articleId" element={<Article />}/> */}
+          <Route path="Article" element={<Article />} ></Route>
         </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
