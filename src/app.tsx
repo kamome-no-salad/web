@@ -1,6 +1,6 @@
 import './style/main.css';
 
-export function Main() {
+export function App() {
   return (
     <>
       <article>
