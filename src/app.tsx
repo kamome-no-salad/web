@@ -1,16 +1,32 @@
 import './style/main.css';
 
+import GlobalNav from './component/GlobalNav'
+import About from './routes/About'
+import Works from './routes/Works'
+import Member from './routes/Member'
+import History from './routes/History'
+import Articles from './routes/Articles'
+import Article from './routes/Article'
+
+import NoMatch from './routes/NoMatch';
+import { Routes, Route } from 'react-router-dom';
+
 export function App() {
   return (
     <>
-      <article>
-        <h1>h1のタイトル</h1>
-        <h2>h2のタイトル</h2>
-        <p>山路やまみちを登りながら、こう考えた。</p>
-        <p>智ちに働けば角かどが立つ。情じょうに棹さおさせば流される。意地を通とおせば窮屈きゅうくつだ。とかくに人の世は住みにくい。</p>
-        <p>住みにくさが高こうじると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟さとった時、詩が生れて、画えが出来る。</p>
-        <p>人の世を作ったものは神でもなければ鬼でもない。やはり向う三軒両隣りょうどなりにちらちらするただの人である。ただの人が作った人の世が住みにくいからとて、越す国はあるまい。あれば人でなしの国へ行くばかりだ。人でなしの国は人の世よりもなお住みにくかろう。</p>
-      </article>
+      <GlobalNav/>
+      <Routes>
+        <Route path="/web" element={null}/>
+        <Route path="/web/About" element={<About />} />
+        <Route path="/web/Works" element={<Works />} />
+        <Route path="/web/Member" element={<Member />} />
+        <Route path="/web/History" element={<History />} />
+        <Route path="/web/Articles" element={<Articles />} >
+          {/* <Route path=":articleId" element={<Article />}/> */}
+          <Route path="Article" element={<Article />} ></Route>
+        </Route>
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
     </>
   );
 }
