@@ -1,31 +1,16 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import FarmLogo from './assets/logo.png';
-export function Main() {
-  const [count, setCount] = useState(0);
+import './style/main.css';
 
+export function Main() {
   return (
     <>
-      <div>
-        <a href="https://farmfe.org/" target="_blank">
-          <img src={FarmLogo} className="logo" alt="Farm logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Farm + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/main.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Farm and React logos to learn more
-      </p>
+      <article>
+        <h1>h1のタイトル</h1>
+        <h2>h2のタイトル</h2>
+        <p>山路やまみちを登りながら、こう考えた。</p>
+        <p>智ちに働けば角かどが立つ。情じょうに棹さおさせば流される。意地を通とおせば窮屈きゅうくつだ。とかくに人の世は住みにくい。</p>
+        <p>住みにくさが高こうじると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟さとった時、詩が生れて、画えが出来る。</p>
+        <p>人の世を作ったものは神でもなければ鬼でもない。やはり向う三軒両隣りょうどなりにちらちらするただの人である。ただの人が作った人の世が住みにくいからとて、越す国はあるまい。あれば人でなしの国へ行くばかりだ。人でなしの国は人の世よりもなお住みにくかろう。</p>
+      </article>
     </>
   );
 }
