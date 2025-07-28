@@ -8,8 +8,10 @@ export default defineConfig({
     output: {
       path: 'build',
       publicPath: '/',
-      targetEnv: 'browser'
-    }
+      targetEnv: 'browser',
+    },
   },
-  plugins: ['@farmfe/plugin-react']
+  plugins: [
+    '@farmfe/plugin-react',
+  ],
 });

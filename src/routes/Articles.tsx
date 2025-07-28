@@ -6,10 +6,10 @@ function Articles() {
       <div className="page">
         <h1>Articles</h1>
         <article>
-          
+          <Outlet />
         </article>
       </div>
-      <Outlet />
+      
     </>
   )
 }

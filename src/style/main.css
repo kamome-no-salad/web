@@ -37,6 +37,7 @@ Header {
     .menu-btn{
       display: none;
     }
+    
   }
 
   &.child {
@@ -61,6 +62,8 @@ Header {
       }
     }
   }
+
+
 
   img {
     width: 100px;
@@ -189,7 +192,7 @@ Header {
 
 .page {
   display: flex;
-  width: calc(100% - 48px);
+  width: calc(100% - 64px);
   max-width: 640px;
   padding: 64px 0px;
   flex-direction: column;
@@ -209,47 +212,49 @@ Header {
     font-weight: 500;
     line-height: normal;
   }
-  h2{
-    margin: 64px 0 24px;
+  article{
+    h1{
+      margin: 64px 0 24px;
 
-    color: #000;
-    text-align: left;
-    font-family: Noto Sans JP;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  h3{
-    margin: 32px 0 24px;
+      color: #000;
+      text-align: left;
+      font-family: Noto Sans JP;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    h2{
+      margin: 32px 0 24px;
 
-    color: #000;
-    text-align: left;
-    font-family: Noto Sans JP;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  h4{
-    margin: 24px 0 24px;
+      color: #000;
+      text-align: left;
+      font-family: Noto Sans JP;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    h3{
+      margin: 24px 0 24px;
 
-    color: #000;
-    text-align: left;
-    font-family: Noto Sans JP;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  p{
-    margin: 0 0 12px;
+      color: #000;
+      text-align: left;
+      font-family: Noto Sans JP;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    p{
+      margin: 0 0 12px;
 
-    color: #000;
-    font-family: Noto Sans JP;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+      color: #000;
+      font-family: Noto Sans JP;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
   }
 }
