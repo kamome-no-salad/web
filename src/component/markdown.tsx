@@ -13,22 +13,26 @@ type Post = {
   metadata: PostMetadata;
   content: string;
 };
+type MarkdownRendererProps = {
+  path: string;
+};
+  
 
-const MarkdownRenderer = () => {
+const MarkdownRenderer = ({path}:MarkdownRendererProps) => {
   const [post, setPost] = useState<Post>({ metadata: {}, content: '' });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // publicフォルダにあるMarkdownファイルをfetchで読み込む
-    fetch('../contents/pages/about.md')
+    fetch(`/${path}`)
       .then((res) => res.text())
       .then((text) => {
         // front-matterでYAMLフロントマターとコンテンツを分離
-        const { atribute, body } = fm(text);
+        const { attributes, body } = fm(text);
         console.log('text', text);
-        console.log('Metadata:', atribute);
+        console.log('Metadata:', attributes);
         console.log('Content:', body);
-        setPost({ metadata: atribute, content: body });
+        setPost({ metadata: attributes, content: body });
         setLoading(false);
       })
       .catch((err) => {
@@ -50,7 +54,7 @@ const MarkdownRenderer = () => {
       </p>
       <div>
         {post.metadata.tags?.map((tag) => (
-          <span key={tag} style={{ marginRight: '8px', padding: '4px', backgroundColor: '#eee' }}>
+          <span key={tag} style={{ marginRight: '8px', padding: '4px 8px', backgroundColor: '#eee' , borderRadius: '8px' }}>
             {tag}
           </span>
         ))}
