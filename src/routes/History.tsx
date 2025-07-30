@@ -1,6 +1,7 @@
 import MarkdownRenderer from "../component/markdown";
 
 function History() {
+  window.scrollTo({top: 0, behavior: "instant"});
   return (
     <>
       <div className="page">

@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router-dom';
+import ArticleList from '../component/ArticleList';
 
 function Articles() {
+  window.scrollTo({top: 0, behavior: "instant"});
   return (
     <>
       <div className="page">
@@ -8,8 +10,10 @@ function Articles() {
         <article>
           <Outlet />
         </article>
+        <article>
+          <ArticleList path="contents/articles/index.json" />
+        </article>
       </div>
-      
     </>
   )
 }

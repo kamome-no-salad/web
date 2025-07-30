@@ -1,0 +1,16 @@
+[
+  {
+    "title": "記事のタイトル",
+    "path": "hello.md",
+    "author": "ちゃーりー",
+    "date": "2025-07-28",
+    "tags": ["tag1", "tag2"]
+  },
+  {
+    "title": "title of the article2",
+    "path": "contents/works/hello2.md",
+    "author": "",
+    "date": "2025-07-28",
+    "tags": ["tag1", "tag2"]
+  }
+]

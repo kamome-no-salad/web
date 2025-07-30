@@ -1,7 +1,7 @@
 function Member() {
+  window.scrollTo({top: 0, behavior: "instant"});
   return (
     <>
-      <article>
       <div className="page">
         <h1>Member</h1>
         <article>
@@ -16,7 +16,6 @@ function Member() {
           
         </article>
       </div>
-      </article>
     </>
   )
 }

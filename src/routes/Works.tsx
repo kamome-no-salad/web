@@ -1,7 +1,7 @@
 function Works() {
+  window.scrollTo({top: 0, behavior: "instant"});
   return (
     <>
-      <article>
       <div className="page">
         <h1>Works</h1>
         <article>
@@ -16,7 +16,6 @@ function Works() {
           
         </article>
       </div>
-      </article>
     </>
   )
 }

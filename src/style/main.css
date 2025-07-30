@@ -13,14 +13,14 @@ Header {
   position: fixed;
 
   &::before{
+    z-index: -1;
     content: '';
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    z-index: -1;
     background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
     opacity: 0;
     transition: all 0.2s ease-in-out;
@@ -28,6 +28,7 @@ Header {
   
   &.open::before{
     opacity: 1;
+    left: 0;
   }
 
   &.home {
@@ -43,8 +44,14 @@ Header {
   &.child {
     top: 16px;
     left: 16px;
+    height: auto;
     justify-content: left;
     align-items: flex-start;
+
+    &.open{
+      z-index: 1;
+      height: 100%;
+    }
 
     h1 {
       display: none;
@@ -190,6 +197,19 @@ Header {
   }
 }
 
+html{
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: gray;
+}
+
 .page {
   display: flex;
   width: calc(100% - 64px);
@@ -213,6 +233,7 @@ Header {
     line-height: normal;
   }
   article{
+    margin: 0;
     h1{
       margin: 64px 0 24px;
 
@@ -256,5 +277,8 @@ Header {
       font-weight: 500;
       line-height: normal;
     }
+  }
+  strong{
+    font-weight: 600;
   }
 }
