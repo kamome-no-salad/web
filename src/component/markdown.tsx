@@ -29,9 +29,6 @@ const MarkdownRenderer = ({path}:MarkdownRendererProps) => {
       .then((text) => {
         // front-matterでYAMLフロントマターとコンテンツを分離
         const { attributes, body } = fm(text);
-        console.log('text', text);
-        console.log('Metadata:', attributes);
-        console.log('Content:', body);
         setPost({ metadata: attributes, content: body });
         setLoading(false);
       })
@@ -48,7 +45,7 @@ const MarkdownRenderer = ({path}:MarkdownRendererProps) => {
   return (
     <div>
       {/* メタデータを表示 */}
-      <h1>{post.metadata.title}</h1>
+      {/* <h1>{post.metadata.title}</h1>
       <p>
         著者: {post.metadata.author} | 公開日: {post.metadata.date}
       </p>
@@ -60,7 +57,7 @@ const MarkdownRenderer = ({path}:MarkdownRendererProps) => {
         ))}
       </div>
 
-      <hr style={{ margin: '20px 0' }} />
+      <hr style={{ margin: '20px 0' , color: 'black' }} /> */}
 
       {/* Markdownコンテンツをレンダリング */}
       <ReactMarkdown>{post.content}</ReactMarkdown>

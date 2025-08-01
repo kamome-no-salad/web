@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 
  type ArticleListProps = {
   path: string;
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 type List = {
     title?: string;
     path?: string;
+    discription?: string;
     author?: string;
     date?: string;
     tags?: string[];
@@ -16,13 +17,13 @@ type List = {
 const ArticleList = ({path}:ArticleListProps) => {
   const [list, setList] = useState<List[]>([]);
   const [loading, setLoading] = useState(true);
+  const { articleId } = useParams();
 
   useEffect(() => {
     // publicフォルダにあるMarkdownファイルをfetchで読み込む
     fetch(`/${path}`)
       .then((res) => res.json())
       .then((ls) => {
-        // front-matterでYAMLフロントマターとコンテンツを分離
         setList(ls);
         setLoading(false);
       })
@@ -38,15 +39,32 @@ const ArticleList = ({path}:ArticleListProps) => {
 
   return (
     <>
-      <section>
+      <section className='articleList'>
         <ul>
           {list?.map((item:List, index:number) => (
-            <li key={index}>
-              <h2>{item.title}</h2>
-              <p>著者: {item.author} | 公開日: {item.date}</p>
-              <p>タグ: {item.tags?.join(', ')}</p>
-              <Link to={"/Articles/"+item.path}>続きを読む</Link>
-            </li>
+            <>
+              {item.path==articleId ? (
+                <li key={index} className='articleListItem active'>
+                  <Outlet />
+                  <Link to={"/Articles"}>閉じる</Link>
+                </li>
+              ) : (
+                <li key={index} className='articleListItem'>
+                  <Link to={"/Articles/"+item.path}>
+                    <h1>{item.title}</h1>
+                    <p>{item.discription}</p>
+                    <p>{item.author} {item.author&&item.date?"|":""} {item.date}</p>
+                    <div className='tags'>
+                    {item.tags?.map((tag) => (
+                      <span key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  </Link>
+                </li>
+              )}
+            </>
           ))}
         </ul>
       </section>

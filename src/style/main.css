@@ -316,9 +316,8 @@ html{
   display: flex;
   flex-direction: column;
   align-items: left;
-  gap: 16px;
+  gap: 8px;
   width: 100%;
-  padding: 16px;
 
   ul {
     display: flex;
@@ -329,13 +328,44 @@ html{
     padding: 0;
 
     li {
+      display: flex;
+      height: auto;
       a {
         text-decoration: none;
         color: #000;
         font-weight: bold;
+        width: 100%;
+        border-left: black 4px solid;
+        padding: 0 4px 4px 8px;
+        transition: all 0.1s ease-in-out;
 
         &:hover {
-          text-decoration: underline;
+          border-left: black 8px solid;
+          padding: 0 0 4px 8px;
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      h1{
+        margin: 0 0 4px;
+        font-size: 16px;
+      }
+
+      p{
+        margin: 4px 0;
+        font-size: 12px;
+      }
+      
+      .tags{
+        display: flex;
+        height: auto;
+        span{
+          margin: 0 4px 0 0;
+          padding: 2px 4px;
+          background-color: lightgray;
+          border-radius: 4px;
+
+          font-size: 10px;
         }
       }
     }
