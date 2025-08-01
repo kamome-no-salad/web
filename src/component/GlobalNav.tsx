@@ -10,6 +10,7 @@ function GlobalNav(){
   return (
     <>
     <header className={`${path=="/"?"home":"child"} ${isOpen?"open":undefined}`}>
+      <div className='header-close' onClick={()=>setIsOpen(false)}></div>
       <Link to="/"><img src={logo} alt="kamome-no-salad logo" className='logo' /></Link>
       <h1>かもめのサラダ</h1>
       <div className={isOpen?"menu-btn open":"menu-btn"} onClick={()=>setIsOpen(!isOpen)}><span></span></div>

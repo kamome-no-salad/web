@@ -10,13 +10,19 @@ Header {
   height: 100%;
   max-width: 320px;
 
+  overflow: hidden;
   position: fixed;
+
+  pointer-events: none;
+  * {
+    pointer-events: auto;
+  }
 
   &::before{
     z-index: -1;
     content: '';
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
@@ -29,6 +35,20 @@ Header {
   &.open::before{
     opacity: 1;
     left: 0;
+  }
+
+  .header-close {
+    z-index: -2;
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    backdrop-filter: blur(0px);
+    transition: all 0.3s ease-in-out;
   }
 
   &.home {
@@ -50,7 +70,12 @@ Header {
 
     &.open{
       z-index: 1;
+      width: 320px;
       height: 100%;
+      .header-close {
+        pointer-events: auto;
+        backdrop-filter: blur(2px);
+      }
     }
 
     h1 {
@@ -105,11 +130,13 @@ Header {
     gap: 16px;
     align-self: stretch;
     padding: 0;
+    pointer-events: none;
 
     li {
       display: flex;
       justify-content: center;
       align-items: center;
+      pointer-events: auto;
 
       a,
       a:visited {
@@ -154,7 +181,7 @@ Header {
   .menu-btn {
     display: flex;
     height: 25px;
-    width: 64px;
+    width: 25px;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
@@ -232,8 +259,10 @@ html{
     font-weight: 500;
     line-height: normal;
   }
+
   article{
     margin: 0;
+    width: 100%;
     h1{
       margin: 64px 0 24px;
 
@@ -280,5 +309,35 @@ html{
   }
   strong{
     font-weight: 600;
+  }
+}
+
+.articleList {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 8px;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
