@@ -1,4 +1,4 @@
-import MarkdownRenderer from "../component/markdown";
+import MarkdownRenderer from "../component/Markdown";
 
 function About() {
   window.scrollTo({top: 0, behavior: "instant"});
