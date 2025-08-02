@@ -1,4 +1,4 @@
-// import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import ArticleList from '../component/ArticleList';
 
 function Articles() {
@@ -8,7 +8,8 @@ function Articles() {
       <div className="page">
         <h1>Articles</h1>
         <article>
-          <ArticleList path="contents/articles/index.json" />
+          <Outlet />
+          <ArticleList filename="contents/articles/index.json" />
         </article>
       </div>
     </>

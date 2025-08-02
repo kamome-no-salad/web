@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import MarkdownRenderer from '../component/markdown';
+import MarkdownRenderer from '../component/Markdown';
 
 function Article(){
   const { articleId } = useParams();

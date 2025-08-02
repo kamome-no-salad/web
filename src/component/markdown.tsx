@@ -28,6 +28,7 @@ const MarkdownRenderer = ({path}:MarkdownRendererProps) => {
       .then((res) => res.text())
       .then((text) => {
         // front-matterでYAMLフロントマターとコンテンツを分離
+        console.log(path);
         const { attributes, body } = fm(text);
         setPost({ metadata: attributes, content: body });
         setLoading(false);

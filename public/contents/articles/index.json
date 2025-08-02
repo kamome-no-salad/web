@@ -1,41 +1,49 @@
 [
   {
-    "title": "記事のタイトル",
+    "title": "一つ目の記事のタイトル",
     "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
-    "path": "hello",
+    "filename": "hello1",
     "author": "ちゃーりー",
     "date": "2025-07-28",
     "tags": ["tag1", "tag2"]
   },
   {
-    "title": "title of the article2",
-    "path": "contents/works/hello2.md",
-    "author": "",
+    "title": "二つ目の記事のタイトル",
+    "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
+    "filename": "hello2",
+    "author": "ちゃーりー",
     "date": "2025-07-28",
     "tags": ["tag1", "tag2"]
   },
   {
-    "title": "記事のタイトル",
-    "path": "hello",
+    "title": "三つ目の記事のタイトル",
+    "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
+    "filename": "hello3",
     "author": "ちゃーりー",
+    "date": "2025-07-28",
     "tags": ["tag1", "tag2"]
   },
   {
-    "title": "title of the article2",
-    "path": "contents/works/hello2.md",
-    "author": "",
+    "title": "四つ目の記事のタイトル",
+    "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
+    "filename": "hello4",
+    "author": "ちゃーりー",
+    "date": "2025-07-28",
     "tags": ["tag1", "tag2"]
   },
   {
-    "title": "記事のタイトル",
-    "path": "hello",
+    "title": "五つ目の記事のタイトル",
+    "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
+    "filename": "hello5",
     "author": "ちゃーりー",
-    "date": "2025-07-28"
+    "date": "2025-07-28",
+    "tags": ["tag1", "tag2"]
   },
   {
-    "title": "title of the article2",
-    "path": "contents/works/hello2.md",
-    "author": "",
+    "title": "六つ目の記事のタイトル",
+    "discription": "ここには記事の説明を書きます。なるべく簡潔に分かりやすい記事の説明を1行で書きます。",
+    "filename": "hello6",
+    "author": "ちゃーりー",
     "date": "2025-07-28",
     "tags": ["tag1", "tag2"]
   }
