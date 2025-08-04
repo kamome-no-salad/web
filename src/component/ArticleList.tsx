@@ -71,9 +71,9 @@ const ArticleList = ({filename}:ArticleListProps) => {
           <Link to={"/Articles"} className='closeLink'>記事一覧へ</Link>
           <ul>
             {list[prevArticleIndex] && (
-              <li key={list[prevArticleIndex].filename} className='articleListItem'>
+              <li key={list[prevArticleIndex].filename}>
                 <p>{"<<"}PREV</p>
-                <Link to={"/Articles/"+list[prevArticleIndex].filename}>
+                <Link to={"/Articles/"+list[prevArticleIndex].filename}  className='articleListItem'>
                   <h1>{list[prevArticleIndex].title}</h1>
                   <p>{list[prevArticleIndex].discription}</p>
                   <p>{list[prevArticleIndex].author} {list[prevArticleIndex].author&&list[prevArticleIndex].date?"|":""} {list[prevArticleIndex].date}</p>
@@ -88,9 +88,9 @@ const ArticleList = ({filename}:ArticleListProps) => {
               </li>
             )}
             {list[nextArticleIndex] && (
-              <li key={list[nextArticleIndex].filename} className='articleListItem'>
+              <li key={list[nextArticleIndex].filename}>
                 <p>NEXT{">>"}</p>
-                <Link to={"/Articles/"+list[nextArticleIndex].filename}>
+                <Link to={"/Articles/"+list[nextArticleIndex].filename}  className='articleListItem'>
                   <h1>{list[nextArticleIndex].title}</h1>
                   <p>{list[nextArticleIndex].discription}</p>
                   <p>{list[nextArticleIndex].author} {list[nextArticleIndex].author&&list[nextArticleIndex].date?"|":""} {list[nextArticleIndex].date}</p>
@@ -111,8 +111,8 @@ const ArticleList = ({filename}:ArticleListProps) => {
         <section className='articleList'>
           <ul>
             {list?.map((item:List, index:Number) => (
-              <li key={item.filename} className='articleListItem' style={{order: -index}}>
-                <Link to={"/Articles/"+item.filename}>
+              <li key={item.filename} style={{order: -index}}>
+                <Link to={"/Articles/"+item.filename} className='articleListItem' >
                   <h1>{item.title}</h1>
                   <p>{item.discription}</p>
                   <p>{item.author} {item.author&&item.date?"|":""} {item.date}</p>

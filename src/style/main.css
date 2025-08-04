@@ -350,7 +350,7 @@ Header {
       display: flex;
       flex-direction: column;
       height: auto;
-      a {
+      .articleListItem {
         text-decoration: none;
         color: #000;
         font-weight: bold;
